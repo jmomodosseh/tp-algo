@@ -1,0 +1,522 @@
+﻿Exercice 1 et 3
+
+Algorithme grand_nombre ;
+Var
+	A, B : Réels ;
+Debut
+	Afficher "Veuillez saisir le premier nombre" ;
+	Saisir A ;
+	Afficher "Veuillez saisir le second nombre" ;
+	Saisir B ;
+Si A>B alors
+	Afficher "Le plus grand nombre est ",A ;
+Sinon si B>A alors
+	Afficher "Le plus grand nombre est ",B ;
+Sinon
+	Afficher "Les deux nombres sont égaux" ;
+FinSi
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 2
+
+Algorithme message ;
+Var
+	Age, annee_naissance : Entiers ;
+Const=2022 ;
+Debut
+	Age ← 2022-annee_naissance ;
+	Afficher "Veuillez saisir votre année de naissance" ;
+	Saisir annee_naissance ;
+Si Age<10 alors
+	Afficher "Vous avez moins de 10 ans"
+Finsi
+Fin
+
+
+
+
+
+
+
+
+
+
+Exercice 4
+
+Algorithme valeur_absolue ;
+Var
+	A : Entier ;
+Debut 
+	Afficher "Veuillez saisir un nombre" ;
+	Saisir A ;
+Si A<0 alors
+	Afficher "La valeur absolue de ", A, "est ", -A ;
+Sinon 
+	Afficher "La valeur absolue de ", A, "est", A ;
+FinSi
+Fin
+
+
+
+
+
+
+
+
+
+
+Exercice 5
+
+
+Algorithme feu_signalisation ;
+Var
+	Couleur : Chaine de caractères ;
+Debut
+	Afficher " Veuillez saisir la couleur du feu de signalisation" ;
+	Afficher "Couleurs possibles : Vert, Rouge ou Orange. " ;
+	Saisir Couleur ;
+Si Couleur= "Rouge" alors
+	Afficher "S’arrêter" ;
+Sinon si Couleur="Orange" alors
+	Afficher "Ralentir" ;
+Sinon si Couleur="Vert" alors
+	Afficher "Passer" ;
+Sinon
+	Afficher "Couleur invalide. Veuillez entrer une couleur valide." ;
+FinSi
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 6
+
+
+Algorithme equation ;
+Var
+	A, B, X : Réels ;
+Debut 
+	X← -B/A
+	Afficher "Veuillez saisir a" ;
+	Saisir A ;
+	Afficher "Veuillez saisir B" ;
+	Saisir B ;
+Si A=0 alors
+	Afficher "Erreur" ;
+Sinon 
+	Afficher "La solution de l’équation ax+b=0 est ", X ;
+FinSi
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 7
+
+
+Algorithme grand_nombre ;
+Var
+	A, B, C, D : Réels ;
+Debut
+	Afficher "Veuillez saisir le premier nombre" ;
+	Saisir A ;
+	Afficher "Veuillez saisir le second nombre" ;
+	Saisir B ;
+	Afficher "Veuillez saisir le troisième nombre" ;
+	Saisir C ;
+Si A>B alors
+       D←A ;
+Sinon si A<B alors
+       D←B ;
+Sinon 
+       D←B ;
+FinSi
+Si D>C alors
+	Afficher "Le plus grand des trois nombres est ", D ;
+Sinon si D<C alors
+	Afficher "Le plus grand nombre des trois est ", C ;
+Sinon
+	Afficher "Le plus grand nombre des trois est ", D ;
+FinSi
+Si A=B et B=C alors 
+	Afficher "Les trois nombres sont égaux" ;
+FinSi
+Fin
+
+
+
+
+
+
+
+
+
+Exercice 8
+
+
+Algorithme feu_signalisation ;
+Var
+	Couleur : chaine de caractères ;
+Debut
+	Afficher "Veuillez saisir la couleur du feu de signalisation" ;
+	Afficher "Soit Rouge, soit Orange ou soit Vert" ;
+	Saisir Couleur ;
+Suivant Couleur faire
+       . "Rouge" : Afficher "S’arrêter" ;
+       . "Orange" : Afficher "Ralentir" ;
+       . "Vert" : Afficher "Passer" ;
+Sinon
+	Afficher "Couleur incorrecte. Veuillez saisir une couleur correcte"
+FinSuivant
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 9
+
+
+Algorithme menu
+Var
+	Menu, A, B, C, : Entiers ;
+	Resultat : Réel ;
+Debut 
+       Afficher "Veuillez choisir une opération dans le menu suivant" ;
+       Afficher "1-Somme" ;
+       Afficher "2-Produit" ;
+       Afficher "3-Moyenne" ;
+       Saisir menu ;
+Si Menu>0 et Menu<4 alors
+Suivant Menu faire
+       . 1 : Resultat← A+B+C ;
+       . 2 : Resultat← A*B*C ;
+       . 3 : Resultat← (A+B+C)/3
+FinSuivant
+	Afficher Resultat ;
+Finsi
+Si A>B et B>C alors
+	Afficher "Le maximum est ", A, "et le minimum est", C ;
+Sinon si A>B et B=C alors
+	Afficher "Le maximum est ", A, "et le minimum est", C ;
+Sinon si A<B et B>C et C>A alors
+	Afficher "Le maximum est ", B, "et le minimum est", A ;
+Sinon si A=B et B>C alors
+	Afficher "Le maximum est ", A, "et le minimum est", C ;
+Sinon si A=B et B<C alors
+	Afficher "Le maximum est ", C, "et le minimum est", A ;
+Sinon si B>A et B<C alors
+	Afficher "Le maximum est ", C, "et le minimum est", A ;
+Sinon si A>B et A<C alors
+       Afficher "Le maximum est ", C, "et le minimum est", B ;
+FinSi
+Fin
+
+
+
+
+
+
+
+
+
+
+
+Exercice 10
+
+
+Algorithme somme ;
+Var
+	i, j :entiers ;
+Debut
+	i←1 ;
+	j←0 ;
+Tant que i<11 faire
+	j←j+i ;
+	i←i+1 ;
+FinTantque
+	Afficher "La somme des 10 premiers nombres est ",j ;
+Fin
+
+
+
+
+
+
+
+
+
+
+
+Exercice 11
+
+
+Algorithme suite_nom ;
+Var
+	Nom : chaine de caractères ;
+	n : Entiers ;
+Debut
+	n←0 ;
+Tant que Nom<>"ZZZZ" faire
+	Afficher nom ;
+	n←n+1 ;
+FinTantque ;
+	Afficher n ;
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 12
+
+
+Algorithme question ;
+Var
+	Reponse : chaine de caractères ;
+Debut
+	Afficher "aimez-vous l’informatique ?" ;
+	Afficher "réponse possible OUI ou NON" ;
+	Saisir Reponse ;
+Tant que Reponse<>OUI et Reponse<>NON faire 
+	Afficher "Réponse incorrecte" ;
+	Afficher "aimez-vous l’informatique ?" ;
+	Afficher "réponse possible OUI ou NON" ;
+	Saisir Reponse ;
+FinTantque
+Fin
+
+
+
+
+
+
+
+
+
+
+
+Exercice 13
+
+
+Algorithme question ;
+Var 
+	Reponse : chaine de caractères ;
+Debut
+Repeter
+	Afficher "aimez-vous l’informatique ?" ;
+	Afficher "réponse possible OUI ou NON" ;
+	Saisir Reponse ;
+Si Reponse<>OUI et Reponse<>NON faire
+	Afficher "Réponse incorrecte" ;
+FinSi
+Jusqu’à Reponse=OUI ou Reponse=NON
+Fin
+
+
+
+
+
+
+
+
+
+Exercice 14
+
+
+Algorithme saisie_nombres ;
+Var
+	n, somme : Entiers ;
+Debut
+	somme←0
+Repeter 
+	Afficher "Veuillez saisir un nombre" ;
+	Saisir n ;
+	somme← somme+n ;
+Jusqu’à somme>=100
+       Afficher somme ;
+Fin
+
+
+
+
+
+
+
+
+
+
+Exercice 15
+
+
+Algorithme somme ;
+Var
+	i, j :Entiers ;
+Debut
+	j←0 ;
+Pour i→1 à 10 
+	j←j+i ;
+FinPour
+       Afficher j ;
+Fin
+
+
+
+
+
+
+
+
+
+Exercice 16
+
+
+Algorithme table_8 ;
+Var
+	i, j : Entiers ;
+Debut
+Pour i→0 a 12 
+	j←8*i ;
+       Afficher j ;
+FinPour
+Fin
+
+
+
+
+
+
+
+
+
+Exercice 17
+
+
+Algorithme tables ;
+Var
+	i, j : Entiers ;
+Debut
+Pour i→1 a 10
+	Pour j←0 a 12
+		j←i*j ;
+		Afficher j ;
+	FinPour
+FinPour
+Fin
+
+
+
+
+
+
+
+
+Exercice 18
+
+
+Algorithme factoriel ;
+Var
+	i, f, n : Entiers ;
+Debut
+	f←1 ;
+	Afficher "Veuillez saisir un nombre" ;
+	Saisir n ;
+Si n>0 alors
+Pour i→1 a n
+	f←f*i ;
+FinPour
+	Afficher "Le factoriel de ", n, "est", f ;
+Sinon si n=0 alors
+	Afficher "Le factoriel de ", n, "est", 1 ;
+Sinon 
+	Afficher "Erreur" ;
+FinSi
+Fin
+
+
+
+
+
+
+
+
+
+Exercice 19
+
+
+Algorithme pgcd ;
+Var
+	min, n1, n2, pgcd, i :Entiers ;
+Debut
+	Afficher "Veuillez saisir un nombre" ;
+	Saisir n1 ;
+	Afficher "Veuillez saisir un autre nombre" ;
+	Saisir n2 ;
+Si n1>n2 alors
+	min← n2 ;
+Sinon si n1<n2 alors
+	min← n1 ;
+Sinon
+	min← n1 ;
+	pgcd← n1 ;
+FinSi
+Si min<0 alors
+	min← -min ;
+FinSi
+Si n1<>n2 et min<>0 alors
+	Pour i→ 1 à min faire
+		Si n1 mod i =0 et n2 mod i =0 alors
+			pgcd← i ;
+		FinSi
+	FinPour
+FinSi
+Si min =0 alors
+	pgcd←1 ;
+FinSi
+	Afficher "Le PGCD de ", A, "et", B, "est", pgcd ;
+Fin

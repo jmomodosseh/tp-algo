@@ -1,0 +1,488 @@
+﻿Exercice 1
+
+Algorithme tableau ;
+Var
+	Tab(1:10) : Tableau de réels ;
+	i : Entiers ;
+	moyenne : réels ;
+Debut
+	Afficher "Veuillez saisir une moyenne" ;
+	Saisir moyenne ;
+Pour i→ 1 à 10 faire
+	Tab[i]←moyenne ;
+	Saisir moyenne ;
+FinPour
+Fin
+
+
+
+
+
+
+
+
+Exercice 2
+
+Algorithme edition_tableau ;
+Var
+	Tab(1:10) : Tableau de réels ;
+	i : entier ;
+Debut
+	Pour i→ 1 à 10 faire
+		Afficher Tab[i] ;
+	FinPour
+Fin
+
+
+
+
+
+
+
+
+Exercice 3
+
+
+Algorithme somme ;
+Var 
+	Tab(1:10) : Tableau de réels ;
+	i : entiers ;
+	somme : réels ;
+Debut
+	somme← 0 ;
+Pour i→ 1 à 10 faire 
+	somme← somme+Tab[i] ;
+FinPour
+	Afficher "La somme des éléments contenus dans le tableau est ", somme ;
+Fin
+
+
+
+
+
+
+
+
+
+
+Exercice 4
+
+
+Algorithme minimum_tableau ;
+Var
+	Tab(1:10) : Tableau de réels ;
+	i : entiers ;
+	min : réels ;
+Debut
+	min←Tab[1] ;
+Pour i→ 1 à 10 faire
+		Si min<Tab[i] alors
+			min←Tab[i] ;
+		FinSi
+FinPour
+	Afficher "Le plus petit élément du tableau est ", min ;
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 5
+
+
+Algorithme recherche_nom ;
+Var
+	Tab(1:20) : Tableau de chaine de caractères ;
+	nom : chaine de caractères ;
+	i : entiers ;
+Debut 
+	Afficher "Veuillez saisir le nom recherché" ;
+	Saisir nom ;
+Pour i→ 1 à 20 faire 
+	Si nom=Tab[i] alors
+		Afficher Tab[i], "est retrouvé à la ", i, "ème place" ;
+	Fin si
+FinPour
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 6
+
+
+Algorithme occurrence ;
+Var 
+	Tab(1:50) : Tableau de chaine de caractères ;
+	i, occurrence : entiers ;
+	nom : chaine de caractères ;
+Debut
+	Afficher "Veuillez saisir un nom" ;
+	Saisir nom ;
+	occurence←0 ;
+Pour i→ 1 à 50 faire 
+	Si nom=Tab[i] alors
+		Occurrence← occurrence+1 ;
+	FinSi
+FinPour
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 7
+
+
+Algorithme suppression ;
+Var
+	Tab(1:10) : Tableau de chaine de caractères ;
+	i, indice : entiers ;
+Debut
+	Afficher "Veuillez entrer l’indice de l’élément à supprimer" ;
+	Saisir indice ;
+Si indice>0 et indice<10 alors
+	Pour i→ 1 à 10 faire 
+		Tab[i]←Tab[i+1] ;
+	FinPour
+Sinon si indice=10 alors
+	Tab[indice]← " " ;
+Sinon 
+	Afficher "Indice incorrect" ;
+FinSi
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 8
+
+
+Algorithme somme_tableaux
+Var
+Tab1(1:5), Tab2(1:5), Tab3(1:5) : Tableau d’entiers ;
+i : entiers ;
+Debut
+Pour i→ 1 à 5 faire 
+	Tab3[i]←Tab1[i]+Tab2[i] ;
+FinPour
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 9
+
+
+Algorithme tri_croissant ;
+Var
+	Tab(1:5) : Tableau d’entiers ;
+	min, j, i, permute, position : Entiers ;
+Debut 
+Pour i→ 1 à 5 faire
+	min←Tab[i] ;
+	position←i ;
+	Pour j→ 1 à 5 faire
+		Si Tab[j]<min alors
+			min←Tab[j] ;
+			position←j ;
+		FinSi
+	FinPour
+	permute←Tab[i] ;
+	Tab[i]←min ;
+	Tab[position]←permute ;
+FinPour
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 10
+
+
+Algorithme tri_bulle ;
+Var
+	Tab(1:5) : tableau d’entiers ;
+	i, min, max : entiers ;
+Debut
+	i←1 ;
+Repeter
+	Si Tab[i]> Tab[i+1] alors ;
+		min← Tab[i+1] ;
+		max← Tab[i] ;
+		Tab[i]← min ;
+		Tab[i+1]← max ;
+	FinSi
+	i←i+1 ;
+Jusqu’à i>4
+Fin
+
+
+
+
+
+
+
+
+
+Exercice 11
+
+
+
+Algorithme recherche_nom ;
+Var
+	Tab(1:10) : tableau de chaine de caractères ;
+	nom : chaine de caractères ;
+	i : entiers ;
+Debut
+	Afficher "Veuillez saisir un nom" ;
+	Saisir nom ;
+Pour i→ 1 à 10 faire
+	Si Tab[i]=nom alors
+		Afficher nom, "est retrouvé à la ",i, "ème position" ;
+	Sinon
+		Afficher nom, "ne se retrouve pas dans le tableau" ;
+	FinSi
+FinPour
+Fin
+
+
+
+
+
+
+
+
+
+
+Exercice 12
+
+
+
+Algorithme recherche_dichotomique ;
+Var
+	Tab(1:10) : tableau d’entiers ;
+	m, n : entiers ;
+Debut
+	Afficher "Veuillez saisir le nombre recherché" ;
+	Saisir n ;
+	m← 11 DIV 2 ;
+Si Tab[m]=n alors,
+	Afficher n, "se retrouve à la ",m, "ième position" ;
+Sinon si Tab[m]>n alors
+	Repeter
+		m← (1+m)DIV2 ;
+	Jusqu’à Tab[m]=n ;
+	Afficher n, "se retrouve à la ",m, "ième position" ;
+Sinon si Tab[m]<n alors
+	Repeter
+		m←(m+10)DIV2 ;
+	Jusqu’à Tab[m]=n
+	Afficher n, "se retrouve à la ",m, "ième position" ;
+Sinon
+	Afficher n, "ne se trouve pas dans le tableau" ;
+FinSi
+Fin
+
+
+
+
+
+
+
+
+
+
+Exercice 13
+
+
+
+Algorithme eclatement ;
+Var
+	val(1:10), pair(1:5), impair(1:5) : tableaux d’entiers ;
+	i, j, k : entiers ;
+Debut
+Pour i→ 1à 10 faire
+		Si val[i]MOD2=0 alors
+			Pour j→ 1 à 5 faire
+				pair[j]←val[i] ;
+			FinPour
+		Sinon
+			Pour k→ 1 à 5 faire
+				impair[k]←val[i] ;
+			FinPour
+		FinSi
+ FinPour
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 14
+
+
+
+
+
+Algorithme ajout ;
+Var
+	tab(1:10) : tableau d’entiers ;
+	i : entiers ;
+Debut
+Pour i→ 10 à 6 pas de -1 faire
+	tab[i]←tab[i-1] ;
+FinPour
+	tab[5]←5 ;
+Fin
+
+
+
+
+
+
+
+
+
+Exercice 15
+
+
+
+
+Algorithme suppression ;
+Var
+	tab(1:10) : tableau d’entiers ;
+	i : entiers ;
+Debut
+Pour i→ 5 à 9 faire 
+		tab[i]←tab[i+1] ;
+FinPour
+	Tab[10]← " " ;
+Fin
+
+
+
+
+
+
+
+
+
+
+
+
+Exercice 16 & 18
+
+
+
+
+Algorithme deux_dimensions ;
+Var
+	tab(1:5,1:10) : tableau d’entiers ;
+	i, j, n : entiers ;
+Debut
+	Afficher "Veuillez saisir un nombre" ;
+	Saisir n ;
+Pour i→ 1 à 5 faire
+	Pour j→ 1 à 10 faire
+		tab[i,j]←n ;
+		Saisir n ;
+	FinPour
+FinPour
+Fin
+
+
+
+
+
+
+
+Exercice 17
+
+
+
+
+
+Algorithme occurrence ;
+Var
+	tab(1:4,1:5) : tableau d’entiers ;
+	i, j, occurrence, n : entiers ;
+Debut
+	Afficher "Veuillez saisir le nombre recherché" ;
+	Saisir n ;
+	occurence←0
+Pour i→ 1 à 4 faire
+	Pour j→ 1 à 5 faire
+		Si n=tab[i,j] alors
+			occurence←occurrence+1 ;
+		FinSi
+	FinPour
+FinPour
+	Afficher "Le nombre ",n, "a été retrouvé ",occurrence, "fois" ;
+Fin
